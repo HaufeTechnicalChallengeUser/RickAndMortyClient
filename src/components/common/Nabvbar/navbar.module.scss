@@ -1,0 +1,58 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.topbar {
+  min-height: 60px;
+  background-color: $dark;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+}
+.links,
+.linksOpen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  .group {
+    @extend %flex-center;
+    a {
+      color: $light;
+      text-decoration: none;
+    }
+    .link,
+    .item {
+      color: $light;
+      font-size: $subtitle-size;
+      text-transform: capitalize;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .item {
+      font-size: $title-size;
+      cursor: default;
+    }
+    .link {
+      border: 1px solid $normal;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .linksOpen {
+    background-color: $light;
+    padding: 0;
+    .grouplinks {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 30px;
+      .link {
+        width: 100%;
+        padding: 15px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.container {
+  .content {
+    background: url("../../../shared/assets/images/home.gif") $normal no-repeat
+      center center / cover;
+    .info {
+      height: 100%;
+      width: 100%;
+      @extend %flex-center;
+      .card {
+        @extend %flex-center;
+        flex-direction: column;
+        background-color: $dark;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 50px 20px;
+        opacity: 0.9;
+        position: relative;
+        top: 150px;
+        .title {
+          color: $light;
+          font-size: $title-size;
+          font-weight: 600;
+          text-align: center;
+        }
+        .text {
+          margin-top: 10px;
+          a {
+            text-decoration: none;
+            color: $light;
+            font-size: $subtitle-size;
+          }
+        }
+      }
+    }
+  }
+}

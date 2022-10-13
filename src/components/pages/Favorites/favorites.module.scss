@@ -1,0 +1,121 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.container {
+  .content {
+    background: $normal;
+    .info {
+      margin: 100px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        color: $dark;
+        font-size: $title-size;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .groupitem {
+        width: 100%;
+        @extend %flex-center;
+        padding-bottom: 30px;
+        .label {
+          color: $light;
+          font-size: $text-size;
+          margin: 5px 20px 0 20px;
+        }
+        .input {
+          width: 300px;
+          color: $light;
+          font-size: $text-size;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid $normal;
+          margin: 0 20px;
+          background-color: $dark;
+          outline: none;
+        }
+      }
+      .groupSpaces {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 50px 30px 50px;
+        .space {
+          flex: 0 50%;
+          .card {
+            display: flex;
+            flex-direction: row;
+            background-color: $dark;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            position: relative;
+            cursor: pointer;
+            .image {
+              height: 200px;
+              width: 200px;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+            .data {
+              padding-left: 20px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              .item {
+                color: $light;
+                font-size: $subtitle-size;
+                margin-bottom: 10px;
+                &:first-child {
+                  font-size: $title-size;
+                  font-weight: 600;
+                }
+              }
+            }
+            .favorite {
+              color: $light;
+              font-size: $subtitle-size;
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              cursor: pointer;
+              .remember,
+              .forget {
+                border: 1px solid $light;
+                border-radius: 5px;
+                padding: 5px 10px;
+                color: $light;
+                background-color: $dark;
+              }
+              .forget {
+                color: $dark;
+                background-color: $light;
+              }
+            }
+          }
+        }
+      }
+      .empty {
+        margin-top: 150px;
+        width: 100%;
+        @extend %flex-center;
+        color: $dark;
+        font-size: $title-size;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    .content {
+      .info {
+        .groupSpaces {
+          .space {
+            flex: 0 100%;
+          }
+        }
+      }
+    }
+  }
+}

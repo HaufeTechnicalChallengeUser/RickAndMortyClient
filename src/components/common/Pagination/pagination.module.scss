@@ -1,0 +1,35 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.pagination {
+  width: 100%;
+  @extend %flex-center;
+  position: fixed;
+  bottom: 0;
+  background-color: $normal;
+  padding: 10px 0;
+  .card {
+    background-color: $dark;
+    border-radius: 5px;
+    padding: 5px 10px;
+    .page {
+      color: $normal;
+      font-size: $subtitle-size;
+      margin: 10px;
+      font-weight: 100;
+      cursor: pointer;
+    }
+    .nonClickable {
+      cursor: default;
+    }
+    .actual {
+      color: $light;
+      font-weight: 600;
+      cursor: default;
+    }
+    .icons {
+      color: $light;
+      font-size: $title-size;
+    }
+  }
+}

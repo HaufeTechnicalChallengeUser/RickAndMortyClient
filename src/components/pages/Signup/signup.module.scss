@@ -1,0 +1,68 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.container {
+  .content {
+    background: url("../../../shared/assets/images/signup.jpg") $normal
+      no-repeat center center / cover;
+    .info {
+      height: 100%;
+      width: 100%;
+      @extend %flex-center;
+      .card {
+        width: 300px;
+        @extend %flex-center;
+        flex-direction: column;
+        background-color: $dark;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 50px 0;
+        .title {
+          color: $light;
+          font-size: $title-size;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+        .links {
+          width: 100%;
+          @extend %flex-center;
+          flex-direction: row;
+          margin-top: 20px;
+          .signin {
+            a {
+              text-decoration: none;
+              color: $light;
+              font-size: $text-size;
+            }
+          }
+        }
+        .form {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .input {
+            margin-bottom: 20px;
+            color: $light;
+            font-size: $text-size;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid $normal;
+            background-color: $dark;
+            outline: none;
+          }
+          .submit {
+            width: 50%;
+            height: 30px;
+            margin: auto;
+            background-color: $dark;
+            color: $light;
+            font-size: $text-size;
+            border-radius: 5px;
+            border: 1px solid $normal;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

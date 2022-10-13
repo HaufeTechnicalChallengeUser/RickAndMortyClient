@@ -1,0 +1,35 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.alerts {
+  width: 300px;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  z-index: 100;
+  font-family: "Montserrat";
+  .alert {
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: visibility 1s, opacity 1s linear;
+  }
+  .success {
+    background-color: $success-color;
+  }
+  .warning {
+    background-color: $warning-color;
+  }
+  .error {
+    background-color: $error-color;
+  }
+  .shown {
+    visibility: visible;
+    opacity: 1;
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
